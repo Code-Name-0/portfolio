@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
 
+import { useEffect, useState } from 'react';
+import {NavBar, About, Work, Skills, Contact} from './dock.jsx'
+import './normalize.css';
+import './globalStyles.scss';
 function App() {
+  // const scrollLocation = useScrollLoaction();
+  // console.log(scrollLocation);*
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar/>
+      <About/>
+      <Skills/>
+      <Work/>
+      <Contact/>
+      <h1>Hello friend, I'm CodeName0</h1>
     </div>
   );
 }

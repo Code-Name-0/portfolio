@@ -1,0 +1,82 @@
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    height: calc(var(--navH) - 2rem );
+    padding: 1rem;   
+    position: sticky;
+    top: 0;
+    transition: all .5s;
+    z-index: 5;
+    a{
+        
+        text-decoration: none;
+    }
+
+    p{
+        margin: 0;
+    }
+    .navs{
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        gap: 6rem;
+
+        .nav{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            p{
+
+                transition: all .3s;
+            }
+            .ActiveNav{
+                height: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.5rem 1rem;
+                background-color: var(--main_Color_Light);
+                color: var(--main_Color);
+                border-radius: 0.5rem;
+                transform: scale(1.1);
+            }
+    
+            .notActiveNav{
+                a{
+                    color: var(--black);
+                }
+            }
+        }
+    }
+
+    .name{
+        p{
+            font-size:2rem;
+        }
+    }
+
+    .contactBtn{
+        display: flex;
+        align-items: center;
+        
+        button{
+            cursor: pointer;
+            padding: .5rem 3rem;
+            border: none;
+            border-radius: .5rem;
+            background-color: var(--white);
+
+            a{
+                color: var((--black));
+            }
+        }
+
+    }
+}
+
+.navShadow{
+    border-bottom: 1px var(--main_Color) solid;
+    background-color: var(--white);
+}

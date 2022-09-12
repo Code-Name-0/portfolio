@@ -1,1 +1,1 @@
-export { NavBar, About, Work, Skills, Contact } from "./components/exporter.jsx";
+export { NavBar, About, Work, Skills, Contact, Footer } from "./components/exporter.jsx";

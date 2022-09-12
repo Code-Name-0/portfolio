@@ -14,14 +14,13 @@ export const NavBar = () => {
       };
   
       window.addEventListener('scroll', handleScroll);
+      setNavs(data.Navs)
   
       return () => {
         window.removeEventListener('scroll', handleScroll);
       };
     }, []);
-    useEffect(()=>{
-        setNavs(data.Navs)
-    },[])
+  
 
     useEffect(()=> {
         

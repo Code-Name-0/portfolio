@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import {NavBar, About, Work, Skills, Contact} from './dock.jsx'
+import {NavBar, About, Work, Skills, Contact, Footer} from './dock.jsx'
 import './normalize.css';
 import './globalStyles.scss';
 function App() {
@@ -14,7 +14,8 @@ function App() {
       <Skills/>
       <Work/>
       <Contact/>
-      <h1>Hello friend, I'm CodeName0</h1>
+      <Footer/>
+      {/* <h1>Hello friend, I'm CodeName0</h1> */}
     </div>
   );
 }

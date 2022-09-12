@@ -81,6 +81,8 @@
             "Name":"Work",
             "Link":"#Work"
         }
-    ]
+    ],
+
+    "Designers": [{"Name": "Mouhane Ouali Manel", "Email": "example@email.com"}]
 
 }

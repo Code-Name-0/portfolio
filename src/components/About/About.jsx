@@ -107,7 +107,7 @@ export const About = () => {
               </div>}
             </div>
             
-            {/* <div className="picture">
+            <div className="picture">
                 {showPic && 
                 <div className="whiteCircle">
                     <div className="waveCircle">
@@ -117,7 +117,7 @@ export const About = () => {
                     
                     <img src={`data:image/*;base64,${data.My_Picture}`} />
                 </div>}
-            </div> */}
+            </div>
         </div>
         </div>
         

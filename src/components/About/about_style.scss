@@ -184,7 +184,33 @@
 }
 
 @media all and (max-width: 500px){
-  .About{
-    display: none;
+  .About {
+    .picture{
+      display: none;
+    }
+    .text {
+      padding: calc(var(--navH)) 0 0 1rem;
+      width: 100%;
+
+      h1{
+        font-size: 2rem;
+      }
+
+      .bio{
+        font-size: 1rem;
+      }
+
+      .scroll{
+        font-size: 1rem;
+
+        a{
+          #hand{
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+      }
+    }
+    
   }
 }

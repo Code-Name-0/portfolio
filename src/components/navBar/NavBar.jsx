@@ -50,55 +50,55 @@ export const NavBar = () => {
 
     
     return ( 
-        <div className="globalContainer">
-            <div className={`navBar ${scroll > 0? "navShadow" : ""}`}>
-            <div className="name">
-                <p>{data.Pseudo.String}</p>
-            </div>
-
-            <div className="navs">
-                {
-                    Navs && Navs.map((nav, i) => {
-                        return ( <div key={i} className={`nav`} onClick={()=>{
-                            markActive(i)
-                        }}>
-                                    <p className={navsStyle[i]}>
-                                    <a href={nav.Link}>{nav.Name}</a>
-                                    </p>
-                                </div> 
-                            )
-                    })
-                }
-            </div>
-
-            <div className="contactBtn">
-                <a href="#Contact"><button>Contact</button></a> 
-            </div>
-
-            <div className="mobileMenu">
-                <div className="icon" onClick={()=>{
-                    setHideMenu(!hideMenu)
-                }}>
-                    <MenuIcon/>
+        <div className="globalContainer navStick">
+                <div className={`navBar ${scroll > 0? "navShadow" : ""}`}>
+                <div className="name">
+                    <p>{data.Pseudo.String}</p>
                 </div>
 
-                <div className="menu">
-                    <div className={`menuItems ${hideMenu? "hideMenu" : ""} `} >
-                        <div className="items">
-                        {Navs && Navs.map((nav, i) => {
-                            return (
-                                <div key={i} className="item">
-                                    <p  >
-                                    <a href={nav.Link} onClick={()=>{setHideMenu(true)}}>{nav.Name}</a>
-                                    </p>
-                                </div>
-                            )
-                        })}
+                <div className="navs">
+                    {
+                        Navs && Navs.map((nav, i) => {
+                            return ( <div key={i} className={`nav`} onClick={()=>{
+                                markActive(i)
+                            }}>
+                                        <p className={navsStyle[i]}>
+                                        <a href={nav.Link}>{nav.Name}</a>
+                                        </p>
+                                    </div> 
+                                )
+                        })
+                    }
+                </div>
+
+                <div className="contactBtn">
+                    <a href="#Contact"><button>Contact</button></a> 
+                </div>
+
+                <div className="mobileMenu">
+                    <div className="icon" onClick={()=>{
+                        setHideMenu(!hideMenu)
+                    }}>
+                        <MenuIcon/>
+                    </div>
+
+                    <div className={`menu ${hideMenu? "hideMenu" : ""} `}>
+                        <div className={`menuItems ${hideMenu? "hideMenu" : ""} `} >
+                            <div className="items">
+                            {Navs && Navs.map((nav, i) => {
+                                return (
+                                    <div key={i} className="item">
+                                        <p  >
+                                        <a href={nav.Link} onClick={()=>{setHideMenu(true)}}>{nav.Name}</a>
+                                        </p>
+                                    </div>
+                                )
+                            })}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
      );
 }

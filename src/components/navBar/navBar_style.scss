@@ -74,9 +74,67 @@
         }
 
     }
+    // position: relative;
+    .mobileMenu{
+        display: inline-block;
+        .hideMenu{
+            display: none;
+        }
+        .menu{
+            // padding-top: var(--navH);
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            left: 0;
+            
+            .menuItems{
+                
+                width: 100%;
+                height: 100%;
+                background-color: var(--white);
+
+                .items{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 50%;
+                    .item{
+                        margin:0;
+                        padding: 1rem;
+                        width: 100%;
+                        text-align: center;
+                      
+                    }
+                    .item:not(:last-child){
+                        border-bottom: 1px solid var(--main_Color_Light);
+                    }
+                }
+            }
+        }
+    }
 }
 
 .navShadow{
     border-bottom: 1px var(--main_Color) solid;
     background-color: var(--white);
+}
+
+
+@media all and (max-width: 500px){
+    .navBar{
+        .name{
+            p{
+                font-size: 1.5rem;
+            }
+        }
+
+        .contactBtn{
+            display: none;
+        }
+        .navs{
+            display: none;
+        }
+    }
 }

@@ -8,7 +8,7 @@
     display: flex;
     .text{
         width: 60%;
-        padding: 6rem 0 0 5rem;
+        padding: 6rem 0 0 3rem;
         .fade_2{
             color: var(--main_Color);
             animation: fade 2s 0s 1 forwards;
@@ -68,7 +68,7 @@
                   position: absolute;
                   top: 0;
                   right: 0;
-                  z-index: 10;
+                  z-index: 1;
                   animation: blinker 2s 0s infinite;
                   transform: translateX(50%);
           
@@ -84,7 +84,7 @@
                   top: 0;
                   right: 0;
                   transform: translateX(50%);
-                  z-index: 10;
+                  z-index: 1;
                   animation: blinker 2s 0s infinite;
                 }
               }
@@ -181,4 +181,10 @@
             }
         }
     }
+}
+
+@media all and (max-width: 500px){
+  .About{
+    display: none;
+  }
 }

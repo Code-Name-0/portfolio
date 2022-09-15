@@ -2,7 +2,7 @@
     --main_Color: #5E3BEE;
     --main_Color_Light: rgba(94, 59, 238, .1 );
     --black: #000000;
-    --kinf_of_white: #F5FCFF;
+    --kind_of_white: #F5FCFF;
     --white_Light: rgba(255, 255, 255, .52);
     --white: #FFFFFF;
     --red: #E62872;
@@ -12,4 +12,8 @@
     --navH: 4rem;
     font-family: 'Roboto', sans-serif;
 
+}
+
+.globalContainer{
+    width: 100%;
 }

@@ -3,7 +3,8 @@ import './skills_style.scss'
 export const Skills = () => {
     const skills = data.Skills
     return ( 
-        <div id="Skills" className="skills">
+       <div className="globalContainer">
+         <div id="Skills" className="skills">
             <label htmlFor="skillsTitle">My skills</label>
             <h2 id='skillsTitle' >
                 My Expertise
@@ -17,6 +18,7 @@ export const Skills = () => {
                 })}
             </div>
         </div>
+       </div>
      );
 }
  

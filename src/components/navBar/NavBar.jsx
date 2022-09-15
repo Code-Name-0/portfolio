@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import data from '../../data.json'
-
+import MenuIcon from '@mui/icons-material/Menu';
 import './navBar_style.scss'
 export const NavBar = () => {
     const [navsStyle, setNavsStyle] = useState([])
     const [Navs, setNavs] = useState(null)
     const [scroll, setScroll] = useState(0)
+    const [hideMenu, setHideMenu] = useState(true)
     useEffect(() => {
       const handleScroll = event => {
   
@@ -49,7 +50,8 @@ export const NavBar = () => {
 
     
     return ( 
-        <div className={`navBar ${scroll > 0? "navShadow" : ""}`}>
+        <div className="globalContainer">
+            <div className={`navBar ${scroll > 0? "navShadow" : ""}`}>
             <div className="name">
                 <p>{data.Pseudo.String}</p>
             </div>
@@ -72,6 +74,31 @@ export const NavBar = () => {
             <div className="contactBtn">
                 <a href="#Contact"><button>Contact</button></a> 
             </div>
+
+            <div className="mobileMenu">
+                <div className="icon" onClick={()=>{
+                    setHideMenu(!hideMenu)
+                }}>
+                    <MenuIcon/>
+                </div>
+
+                <div className="menu">
+                    <div className={`menuItems ${hideMenu? "hideMenu" : ""} `} >
+                        <div className="items">
+                        {Navs && Navs.map((nav, i) => {
+                            return (
+                                <div key={i} className="item">
+                                    <p  >
+                                    <a href={nav.Link} onClick={()=>{setHideMenu(true)}}>{nav.Name}</a>
+                                    </p>
+                                </div>
+                            )
+                        })}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
      );
 }

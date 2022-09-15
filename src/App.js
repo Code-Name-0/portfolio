@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 import {NavBar, About, Work, Skills, Contact, Footer} from './dock.jsx'
 import './normalize.css';
 import './globalStyles.scss';
+//TODO: make the page responsive
 function App() {
-  // const scrollLocation = useScrollLoaction();
-  // console.log(scrollLocation);*
+
   
   return (
     <div className="App">

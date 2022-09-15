@@ -2,7 +2,7 @@
     height: 100vh;
     padding-top: calc(var(--navH) + 1rem);
     .workTitle{
-
+        padding: 1rem;
     }
 
     .projectsWrapper{
@@ -16,7 +16,7 @@
 
         .projectsContainer{
             overflow-y: auto;
-
+            overflow-x: hidden;
             &::-webkit-scrollbar {
             width:.5rem;    
             }
@@ -79,4 +79,17 @@
     }
 
     
+}
+
+@media all and (max-width: 500px){
+    .work{
+        .projectsWrapper{
+            .projectsContainer{
+                .project{
+
+                    padding: 1rem .2rem;
+                }
+            }
+        }
+    }
 }

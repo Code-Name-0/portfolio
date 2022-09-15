@@ -4,19 +4,21 @@ export const Work = () => {
     const projects = data.Work
 
     return ( 
-        <div id="Work" className="work">
+       <div className="globalContainer">
+         <div id="Work" className="work">
             <h2 className="workTitle">
                 My Work
             </h2>
 
             <div className="projectsWrapper">
-            <div className="projectsContainer">
-                {projects.map((project, i) => {
-                    return <Project key={i} project={project} />
-                })}
-            </div>
+                <div className="projectsContainer">
+                    {projects.map((project, i) => {
+                        return <Project key={i} project={project} />
+                    })}
+                </div>
             </div>
         </div>
+       </div>
      );
 }
  

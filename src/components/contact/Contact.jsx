@@ -12,7 +12,8 @@ export const Contact = () => {
         emailjs.sendForm("service_rm46jmj","template_ic10cmn", form.current ,"U6jJ7o7hjDaDG4r4y").then(res => console.log(res))
     }
     return ( 
-        <div id='Contact' className="contact">
+      <div className="globalContainer">
+          <div id='Contact' className="contact">
             <div className="title">
                 <label htmlFor="contactTitle">Get in Touch</label>
                 <h2>Contact me</h2>
@@ -56,6 +57,7 @@ export const Contact = () => {
 
             </form>
         </div>
+      </div>
      );
 }
- 
+

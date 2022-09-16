@@ -4,6 +4,8 @@ import './footer_style.scss'
 import conf from '../../data.json'
 
 
+//TODO: change Manel's email to km_mohandouali@esi.dz
+//TODO: make footer smaller (half)
 
 export const Footer = () => {
     const [navs, setNavs] = useState(null)
@@ -46,7 +48,7 @@ export const Footer = () => {
     }
     </div>
 
-    <div className="sociales">
+    <div className="socials">
         {contacts &&
             contacts.map((contact,i ) =>{
                 console.log(contact.Link)

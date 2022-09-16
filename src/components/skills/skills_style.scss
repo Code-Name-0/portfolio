@@ -1,9 +1,15 @@
 .skills{
     padding-top: calc(var(--navH) + 1rem);
-    min-height: 100vh;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // min-height: 100vh;
+    .title{
+        text-align: center;
+        margin: 0 0 calc(var(--navH) + 1rem) 0;
+    }
     #skillsTitle{
-        font-size: 2.2rem;
+        font-size: 2rem;
         margin: 0;
         padding-left: 5rem;
     }
@@ -15,16 +21,19 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        width: 45%;
-        margin: auto;
+        width: 60%;
+        // margin: auto;
+        gap: 10%;
+        height: 60%;
         .skill{
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
             min-height: 12rem;
-            min-width: 26%;
+            min-width: 20%;
             border-radius: 1rem;
+            margin-bottom: 3rem;
             img{
                 width: 50%;
             }

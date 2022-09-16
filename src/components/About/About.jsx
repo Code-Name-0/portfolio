@@ -5,6 +5,10 @@ import PanToolAltIcon from '@mui/icons-material/PanToolAlt';
 
 import './about_style.scss'
 
+//TODO: make animations faster
+//TODO: make text smaller
+
+
 export const About = () => {
     const [lettersClasses, setLettersClasses] = useState(["hidden","hidden","hidden","hidden","hidden","hidden","hidden","hidden","hidden","hidden"])
     const [i, setI] = useState(-1)
@@ -18,24 +22,24 @@ export const About = () => {
     useEffect(()=>{
         setTimeout(()=>{
             setTypePseudo(true)
-        }, 600)
+        }, 500)
 
         setTimeout(()=>{
             setShowPic(true)
-        }, 1000)    
+        }, 2000)    
         
         setTimeout(()=>{
             setShowOccupation(true)
-        }, 3800)
+        }, 2800)
 
 
         setTimeout(()=>{
             setShowBio(true)
-        }, 4900)
+        }, 3900)
 
         setTimeout(()=>{
             setShowScrollHand(true)
-        }, 6000)
+        }, 4500)
 
     },[])
     useEffect(()=> {
@@ -56,7 +60,7 @@ export const About = () => {
         setTimeout(() => {
             if (i < 10 )
                 increment(i)
-        },i === 2 ? 1000 : 200)
+        },i === -1 ? 100 : i === 2  ? 1000 : 100)
     }   
 
     

@@ -1,14 +1,20 @@
 import data from '../../data.json'
 import './work_style.scss'
+
+//TODO: center the title and make it a bit bigger
+
 export const Work = () => {
     const projects = data.Work
 
     return ( 
        <div className="globalContainer">
          <div id="Work" className="work">
-            <h2 className="workTitle">
+            <div className="workTitle">
+            <h2>
                 My Work
             </h2>
+
+            </div>
 
             <div className="projectsWrapper">
                 <div className="projectsContainer">

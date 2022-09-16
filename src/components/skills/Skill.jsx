@@ -1,14 +1,17 @@
 import data from '../../data.json'
 import './skills_style.scss'
+
 export const Skills = () => {
     const skills = data.Skills
     return ( 
        <div className="globalContainer">
          <div id="Skills" className="skills">
-            <label htmlFor="skillsTitle">My skills</label>
-            <h2 id='skillsTitle' >
-                My Expertise
-            </h2>
+            <div className="title">
+                <label htmlFor="skillsTitle">My skills</label>
+                <h2 id='skillsTitle' >
+                    My Expertise
+                </h2>
+            </div>
 
             <div className="skillsContainer">
                 {skills.map((s, i) => {

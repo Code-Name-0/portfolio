@@ -8,17 +8,17 @@
     display: flex;
     .text{
         width: 60%;
-        padding: 6rem 0 0 3rem;
+        padding: 7rem 0 0 3rem;
         .fade_2{
             color: var(--main_Color);
-            animation: fade 2s 0s 1 forwards;
+            animation: fade var(--fading_duration) 0s 1 forwards;
         }
         h1{
-            font-size: 3.5rem;
+            font-size: 2rem;
             margin-bottom: 0;
             .fade_1{
                 color: var(--dark);
-                animation: fade 2s 0s 1  forwards;
+                animation: fade var(--fading_duration) 0s 1  forwards;
             }
             
             .nickName{
@@ -36,7 +36,8 @@
                 }
           
                 #o1{
-                  animation: animate-o1 500ms .3s forwards;
+                  animation: animate-o1 1ms 500ms forwards;
+                  // anim
                 }
                 span.glitch1, span.glitch2{
                   position: absolute;
@@ -69,23 +70,23 @@
                   top: 0;
                   right: 0;
                   z-index: 1;
-                  animation: blinker 2s 0s infinite;
-                  transform: translateX(50%);
+                  animation: blinker 1s 0s infinite;
+                  transform: translateX(40%) translateY(-15%);
           
                 }
           
                 &::before{
                   content: "";
                   width: .8rem;
-                  height: 97%;
+                  height: 95%;
                   border-top:  var(--gray) solid 2px;
                   border-bottom:  var(--gray) solid 2px;
                   position: absolute;
                   top: 0;
                   right: 0;
-                  transform: translateX(50%);
+                  transform: translateX(52%) translateY(-15%);
                   z-index: 1;
-                  animation: blinker 2s 0s infinite;
+                  animation: blinker 1s 0s infinite;
                 }
               }
         }
@@ -94,11 +95,11 @@
             font-size: 1.5rem;
             color: var(--gray);
             width: 70%;
-            animation: fade 2s 0s 1 forwards;
+            animation: fade var(--fading_duration) 0s 1 forwards;
         }
 
         .fade_3{
-            animation: fade 2s 0s 1 forwards;
+            animation: fade var(--fading_duration) 0s 1 forwards;
         }
 
         .scroll {
@@ -107,7 +108,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: var(--main_Color);
             a {
               color: var(--main-blue);
@@ -154,7 +155,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            animation: fade 2s 0s 1 forwards;
+            animation: fade var(--fading_duration) 0s 1 forwards;
             .waveCircle{
                 display: flex;
                 align-items: center;

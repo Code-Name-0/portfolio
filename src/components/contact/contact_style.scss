@@ -9,7 +9,7 @@
 
         h2{
             margin: 0;
-            font-size: 3rem;
+            font-size: 2rem;
         }
     }
 
@@ -20,7 +20,50 @@
         margin: 3rem auto;
         justify-content: space-between;
         gap: 10%;
+        .messageSentErr{
+            background-color: var(--red_Light);
+            border: 2px solid var(--red);
+            a{
+                text-decoration: none;
+                color: var(--black);
+            }
+        }
 
+        .message{
+            margin: 1rem auto;
+            transition: all .5s;
+            p:not(:last-child){
+                margin: 0;
+            }
+
+            p:first-child{
+                margin-top: 1rem;
+            }
+
+            p:last-child{
+                margin-top: 0;
+            }
+
+            
+            border-radius: 2rem;
+            padding: 0 1rem;
+            text-align: center;
+            transform: scaleY(1);
+            opacity: 1;
+        }
+        
+        .messageSent{
+            // animation: messageSent 1s 1s forwards;
+            background-color: var(--green_Light);
+            border: 2px solid var(--green);
+        }
+        .hideMessage{
+            transform: scaleY(0);
+            opacity: 0;
+        }
+        .removeDisplay{
+            display: none;
+        }
         label{
             margin: 1rem 0 .3rem .3rem;
         }
@@ -98,7 +141,7 @@
             gap: 10%;
             flex-direction: column;
             align-items: center;
-
+            
             .input{
                 width: 100%;
 

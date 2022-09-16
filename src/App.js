@@ -4,6 +4,10 @@ import {NavBar, About, Work, Skills, Contact, Footer} from './dock.jsx'
 import './normalize.css';
 import './globalStyles.scss';
 //TODO: make the page responsive
+
+//TODO: less space between page sections
+
+//TODO: make global font size smaller
 function App() {
 
   

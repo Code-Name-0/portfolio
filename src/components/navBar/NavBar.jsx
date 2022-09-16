@@ -27,10 +27,15 @@ export const NavBar = () => {
         
         if (Navs) {
             const tmp = []
-            Navs.forEach(() =>{ 
+            let x = 0
+            let location = window.location.hash;
+            Navs.forEach((nav, i) =>{ 
+                if (nav.Link === location ) x = i
                 tmp.push("notActiveNav")
             })
-            tmp[0] = "ActiveNav"
+            console.log(x)
+            tmp[x] = "ActiveNav"
+
         setNavsStyle(tmp)
         }
        

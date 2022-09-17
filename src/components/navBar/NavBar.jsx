@@ -57,7 +57,7 @@ export const NavBar = () => {
     return ( 
         <div className="globalContainer navStick">
                 <div className={`navBar ${scroll > 0? "navShadow" : ""}`}>
-                <div className="name">
+                <div className="name noSelect" >
                     <p>{data.Pseudo.String}</p>
                 </div>
 
@@ -67,7 +67,7 @@ export const NavBar = () => {
                             return ( <div key={i} className={`nav`} onClick={()=>{
                                 markActive(i)
                             }}>
-                                        <p className={navsStyle[i]}>
+                                        <p className={`${navsStyle[i]} noSelect`} >
                                         <a href={nav.Link}>{nav.Name}</a>
                                         </p>
                                     </div> 
@@ -76,7 +76,7 @@ export const NavBar = () => {
                     }
                 </div>
 
-                <div className="contactBtn">
+                <div className="contactBtn noSelect">
                     <a href="#Contact"><button>Contact</button></a> 
                 </div>
 
